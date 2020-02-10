@@ -1,2 +1,17 @@
-<mat-toolbar color="primary">{{ title }}</mat-toolbar>
-<router-outlet></router-outlet>
+<mat-toolbar color="primary">
+  <span>{{ title }}</span>
+  <span class="spacer"></span>
+    <button mat-mini-fab color="primary" [matMenuTriggerFor]="menu">
+      <mat-icon>{{ isSignedIn ? 'exit_to_app' : 'menu' }}</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item *ngIf="isSignedIn; else signedOut" (click)="signOut()">Sugn Out</button>
+      <ng-template #signedOut>
+        <button mat-menu-item routerLink="/auth/signin">Sugn In</button>
+        <button mat-menu-item routerLink="/auth/signup">Sign Up</button>
+      </ng-template>
+    </mat-menu>
+</mat-toolbar>
+<div class="wrapper">
+  <router-outlet></router-outlet>
+</div>
