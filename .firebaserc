@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fire-auth-2b296": {
+      "hosting": {
+        "firebase-auth": [
+          "fire-auth-2b296"
+        ]
+      }
+    }
+  }
+}

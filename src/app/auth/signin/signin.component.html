@@ -1,0 +1,19 @@
+<div class="signin-wrapper">
+  <mat-card>
+    <mat-card-title>Authentication</mat-card-title>
+    <mat-card-content>
+      <form class="signin-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" placeholder="Email">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password" placeholder="Password">
+        </mat-form-field>
+        <button mat-raised-button>Sign In</button>
+      </form>
+      <a routerLink="/auth/signup" class="bottom-link">Sign Up</a>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,16 @@
+.signin-wrapper {
+  width: 350px;
+  margin: 0 auto;
+
+  .signin-form {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .bottom-link {
+    display: block;
+    width: 100%;
+    text-align: right;
+    margin-top: 10px;
+  }
+}

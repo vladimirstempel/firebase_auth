@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from '@guards/auth.guard';
+import { GuestGuard } from '@guards/guest.guard';
 
 
 const routes: Routes = [
@@ -13,7 +15,13 @@ const routes: Routes = [
       },
       {
         path: 'dashboard',
-        loadChildren: './dashboard/dashboard.module#DashboardModule'
+        loadChildren: './dashboard/dashboard.module#DashboardModule',
+        canActivateChild: [AuthGuard]
+      },
+      {
+        path: 'auth',
+        loadChildren: './auth/auth.module#AuthModule',
+        canActivateChild: [GuestGuard]
       }
     ]
   }

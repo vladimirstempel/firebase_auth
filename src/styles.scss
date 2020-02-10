@@ -10,3 +10,22 @@ body {
   background: #303030;
   color: #fff;
 }
+
+.error-notification {
+  background: #b71c1c;
+  color: #fff;
+}
+
+.success-notification {
+  background: #00c853;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+
+  &:hover {
+    color: #ddd;
+  }
+}
